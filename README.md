@@ -12,6 +12,8 @@ Go to [Releases Page](https://github.com/Shagnikpaul/MyInstants-Downloader/relea
 wherever you want and execute the `main.exe` file in that directory.
 
 # How to use it ?
+# ⚠ IMPORTANT NOTE / WARNING
+It is recommended to turn down the volume of the application to somewhat low level because some sounds of myinstans.com are extremely loud and can literally kill you so consider lowering the volume first and then start using it 🤓
 Click on the sound button to play that particular sound and download it by clicking the adjacent download button. 
 > Downloaded files can be found in `downloads` folder present in the directory where files were extracted. (The one contaning the .exe file of this app) see the screenshot below for more info.
 
