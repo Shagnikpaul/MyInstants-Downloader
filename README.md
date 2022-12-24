@@ -8,8 +8,11 @@ A GUI utility to play and download sounds from [myinstants.com](https://www.myin
 ![SCREEM](https://i.imgur.com/klNR5t3.png)
 
 # How to run it ? (Currently only Windows supported.)
+### PORTABLE .zip
 Go to [Releases Page](https://github.com/Shagnikpaul/MyInstants-Downloader/releases/tag/release), download the latest `MyInstants_Downloader.zip` then extract the zip
 wherever you want and execute the `main.exe` file in that directory.
+### SETUP .exe
+Just run the installer like any normal software installer.
 
 # How to use it ?
 # ⚠ IMPORTANT NOTE / WARNING
