@@ -12,6 +12,8 @@ import os
 import tkinter
 app = customtkinter.CTk()  # create CTk window like you do with the Tk window
 app.geometry("1600x800")
+app.winfo_toplevel().wm_title('MyInstants downloader and player.')
+app.winfo_toplevel().iconbitmap('main.ico')
 # Use CTkButton instead of tkinter Button
 
 # button2 = customtkinter.CTkButton(
@@ -56,6 +58,7 @@ def download(obj):
                     if chunk:
                         audio.write(chunk)
             labelheading.configure(text = f"{obj['title']} \n was downloaded....")
+            labelheading.after(2000, defaultHeading)
         except OSError:
             print('Critical Error 💀') 
 
@@ -75,7 +78,7 @@ def search_builder(query:str):
             print('ooooof')    
         print('Iwas done --------------------------------------------')
     search_results = []
-    u = 43
+    u = 4
     c = 2
     i = 0
     q = 0
@@ -93,9 +96,9 @@ def search_builder(query:str):
             threading.Thread(target=download, args=(l[x],), daemon=True).start()
            
            bu = customtkinter.CTkButton(
-               master=app, text=f"{k['title']}", fg_color="#000000", command=pl, width=20, compound="left")
+               master=frame2, text=f"{k['title']}", fg_color="#000000", command=pl, width=20, compound="left")
            dw = customtkinter.CTkButton(
-               master=app, text='', command=downlo, fg_color="#000000", width=5, image=my_image)
+               master=frame2, text='', command=downlo, fg_color="#000000", width=5, image=my_image)
            search_results.append([bu,dw])
            bu.grid(row=u, column=c, pady=2, sticky='w')
            dw.grid(row=u, column=(c+1),padx=5)
@@ -104,7 +107,7 @@ def search_builder(query:str):
            u+=1
            if i % 4 == 0:
              c += 2
-             u = 43
+             u = 4
 
 
 def search():
@@ -163,6 +166,18 @@ def prevp():
     l = threading.Thread(target=b, args=('sd',), daemon=True).start()
 
 
+frame = customtkinter.CTkFrame(master=app,
+                               corner_radius=10, width=1200, height=500, fg_color='#242424')
+frame.place(relx=0.0, rely=0.0, anchor=tkinter.NW)
+
+frame2 = customtkinter.CTkFrame(master=app,
+                                corner_radius=10, width=1200, fg_color='#242424')
+frame2.place(relx=0.0, rely=0.6,anchor=tkinter.NW)
+
+
+
+
+
 my_font2 = customtkinter.CTkFont(family="Roboto", size=20)
 labelheading = customtkinter.CTkLabel(master=app, text="MyInstants Downloader and \n Player",font=my_font2)
 labelheading.place(relx=0.9, rely=0.1, anchor=tkinter.NE)
@@ -182,7 +197,7 @@ emoji = customtkinter.CTkImage(light_image=Image.open("flush.png"),
                                   size=(60, 60))
 labelheading2 = customtkinter.CTkLabel(
     master=app, text="\n\n\n\n\n Made with least effort by Shagnik Paul.", font=my_font2,image=emoji)
-labelheading2.place(relx=0.9, rely=0.8, anchor=tkinter.NE)
+labelheading2.place(relx=0.95, rely=0.8, anchor=tkinter.NE)
 k = 0
 u = 1
 w = 1
@@ -195,9 +210,9 @@ for i in l:
     def downlo(x=k):
         threading.Thread(target=download, args=(l[x],), daemon=True).start()
     button = customtkinter.CTkButton(
-        master=app, text=i['title'], command=ply, fg_color="#000000", width=10,compound="left")
+        master=frame, text=i['title'], command=ply, fg_color="#000000", width=10,compound="left")
     dbutton = customtkinter.CTkButton(
-        master=app, text='', command=downlo, fg_color="#000000", width=5, image=my_image)
+        master=frame, text='', command=downlo, fg_color="#000000", width=5, image=my_image)
     button_list.append([button,dbutton])
     button.grid(row=w, column=u, pady=1,sticky='w')
     dbutton.grid(row=w, column=(u+1),pady=1,padx=20)
@@ -215,12 +230,20 @@ next_button = customtkinter.CTkButton(
     master=app, text="NEXT PAGE >", command=nextp, fg_color="#000000", width=20)
 next_button.place(relx=0.9, rely=0.4, anchor=tkinter.NE)
 my_font = customtkinter.CTkFont(family="Roboto", size= 20)
-label = customtkinter.CTkLabel(master=app, text="Search", compound="center",font=my_font)
-label.grid(row=39, column=1,pady=30)
-entry = customtkinter.CTkEntry(master=app, placeholder_text="Search Query",)
-entry.grid(row=40, column=1)
+label = customtkinter.CTkLabel(master=frame2, text="Search", compound="center",font=my_font)
+label.grid(row=1, column=1)
+entry = customtkinter.CTkEntry(master=frame2, placeholder_text="Search Query",)
+entry.grid(row=2, column=1,pady=5)
 search_button = customtkinter.CTkButton(
-    master=app, text="Search", command=search, fg_color="#000000", width=100)
-search_button.grid(row=41, column=1,pady=10)
+    master=frame2, text="Search", command=search, fg_color="#000000", width=100)
+search_button.grid(row=3, column=1,pady=2)
+
+def openDownload():
+    os.startfile(os.getcwd()+'/downloads')
+
+download_folder = customtkinter.CTkButton(master=app,text='Open downloads folder.',fg_color='#000000',command=openDownload)
+download_folder.place(relx=0.87, rely=0.5, anchor=tkinter.NE)
+threading.Thread(target=playsound, args=(
+    'on.mp3',), daemon=True).start()
 
 app.mainloop()
