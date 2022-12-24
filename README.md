@@ -3,9 +3,9 @@ A GUI utility to play and download sounds from [myinstants.com](https://www.myin
 
 # Screenshots
 ## Main Screen 
-![SCREEM](https://i.imgur.com/f4KfxQf.png)
+![SCREEM](https://i.imgur.com/gk1dYcf.png)
 ## Search Function 
-![SCREEM](https://i.imgur.com/p6ymBti.png)
+![SCREEM](https://i.imgur.com/klNR5t3.png)
 
 # How to run it ? (Currently only Windows supported.)
 Go to [Releases Page](https://github.com/Shagnikpaul/MyInstants-Downloader/releases/tag/release), download the latest `MyInstants_Downloader.zip` then extract the zip
@@ -19,7 +19,7 @@ Click on the sound button to play that particular sound and download it by click
 
 
 # Downloads Location
-All .mp3 files which you want to download by pressing the **download** button are saved in **downloads** folder present in the directory which has the `main.exe` file.
+You can click on the `Open downloads folder` to access the folder.All .mp3 files which you want to download by pressing the **download** button are saved in **downloads** folder present in the directory which has the `main.exe` file.
 ![SHOT](https://i.imgur.com/cuiyA9t.png)
 # Libraries Used.
 - Custom Tkinter for GUI
