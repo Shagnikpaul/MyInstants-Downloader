@@ -12,7 +12,7 @@ A GUI utility to play and download sounds from [myinstants.com](https://www.myin
 Go to [Releases Page](https://github.com/Shagnikpaul/MyInstants-Downloader/releases/tag/release), download the latest `MyInstants_Downloader.zip` then extract the zip
 wherever you want and execute the `main.exe` file in that directory.
 ### SETUP .exe
-Just run the installer like any normal software installer.
+Go to [Releases Page](https://github.com/Shagnikpaul/MyInstants-Downloader/releases/tag/release), download the `setup.exe` and then run the installer like any normal software installer of Windows.
 
 # How to use it ?
 # ⚠ IMPORTANT NOTE / WARNING
