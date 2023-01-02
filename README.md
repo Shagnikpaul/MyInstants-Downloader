@@ -1,5 +1,6 @@
 # MyInstants-Downloader
 A GUI utility to play and download sounds from [myinstants.com](https://www.myinstants.com/en/index/in/) made using python with least effort 💀. A great tool for shitposters and content creators.
+![BADGE](https://badgen.net/github/release/Shagnikpaul/MyInstants-Downloader-GUI)
 
 # Screenshots
 ## Main Screen 
