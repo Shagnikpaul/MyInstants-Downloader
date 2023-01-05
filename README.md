@@ -27,7 +27,7 @@ Click on the sound button to play that particular sound and download it by click
 
 
 # Downloads Location
-You can click on the `Open downloads folder` to access the folder.All .mp3 files which you want to download by pressing the **download** button are saved in **downloads** folder present in the directory which has the `main.exe` file.
+You can click on the <kbd>Open downloads folder</kbd> button to access the folder.All .mp3 files which you want to download by pressing the **download** button are saved in **downloads** folder present in the directory which has the `main.exe` file.
 ![SHOT](https://i.imgur.com/cuiyA9t.png)
 # Libraries Used.
 - Custom Tkinter for GUI
