@@ -3,7 +3,7 @@
 
 <br>
 
-A GUI utility to play and download sounds from [myinstants.com](https://www.myinstants.com/en/index/in/) made using python with least effort 💀. A great tool for shitposters and content creators.
+A GUI utility to play and download sounds from [myinstants.com](https://www.myinstants.com/en/index/in/) made using python with least effort 💀. A great tool for s**tposters and content creators.
 
 
 # Screenshots
