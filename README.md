@@ -1,6 +1,6 @@
 # MyInstants-Downloader
 ![BADGE](https://badgen.net/github/release/Shagnikpaul/MyInstants-Downloader-GUI)
-
+![B2](https://img.shields.io/github/downloads/Shagnikpaul/MyInstants-Downloader-GUI/total)
 <br>
 
 A GUI utility to play and download sounds from [myinstants.com](https://www.myinstants.com/en/index/in/) made using python with least effort 💀. A great tool for s**tposters and content creators.
